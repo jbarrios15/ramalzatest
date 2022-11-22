@@ -90,28 +90,28 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
 
                         }>X</button>
                         <br></br>
-                        <div class="flex items-center justify-between mb-4">
-                            <h5 class="text-xl font-bold leading-none text-blue-800 dark:text-white">Agrega tu vehiculo para filtrar tu busqueda</h5>
+                        <div className="flex items-center justify-between mb-4">
+                            <h5 className="text-xl font-bold leading-none text-blue-800 dark:text-white">Agrega tu vehiculo para filtrar tu busqueda</h5>
 
                         </div>
-                        <div class="flow-root">
-                            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                                <li class="py-3 sm:py-1">
+                        <div className="flow-root">
+                            <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
+                                <li className="py-3 sm:py-1">
                                     <div className='max-w p-3 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700'>
                                         <div className="flex items-center space-x-4">
-                                            <div class="flex-shrink-0">
-                                                <div class="flex items-center mb-2">
-                                                    <input id="default-radio-1" type="radio" value='nulo' name="radioselectvehiculo" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                            <div className="flex-shrink-0">
+                                                <div className="flex items-center mb-2">
+                                                    <input id="default-radio-1" type="radio" value='nulo' name="radioselectvehiculo" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
 
                                                 </div>
                                             </div>
-                                            <div class="flex-1 min-w-0">
-                                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                            <div className="flex-1 min-w-0">
+                                                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
                                                    Buscar para cualquier vehiculo
                                                 </p>
                                                
                                             </div>
-                                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                                 
                                             </div>
                                         </div>
@@ -122,11 +122,11 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
                                 </li>
                                 {
                                     vehiculosSelect.length === 0 ? (
-                                        <li class="py-3 sm:py-4">
-                                            <div class="flex items-center space-x-4">
+                                        <li className="py-3 sm:py-4">
+                                            <div className="flex items-center space-x-4">
 
-                                                <div class="flex-1 min-w-0">
-                                                    <p class="text-sm font-medium text-blue-600 truncate dark:text-white">
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-sm font-medium text-blue-600 truncate dark:text-white">
                                                         No tiene vehiculos registrados.
                                                     </p>
 
@@ -142,11 +142,11 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
                                                    
                                                     <div>
 
-                                                        <li class="py-3 sm:py-1">
+                                                        <li className="py-3 sm:py-1">
                                                             <div className='max-w p-3 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700'>
                                                                 <div className="flex items-center space-x-4">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div class="flex items-center mb-2">
+                                                                    <div className="flex-shrink-0">
+                                                                        <div className="flex items-center mb-2">
                                                                                 {
                                                                                     sacarIdSelect()===vehiculo.id? (
                                                                                         <input checked id={vehiculo.id} type="radio" value={vehiculo.id} name="radioselectvehiculo" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
@@ -159,15 +159,15 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
                                                                              
                                                                         </div>
                                                                     </div>
-                                                                    <div class="flex-1 min-w-0">
-                                                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                                    <div className="flex-1 min-w-0">
+                                                                        <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
                                                                             {vehiculo.tipo},{vehiculo.marca},{vehiculo.modelo}
                                                                         </p>
-                                                                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                                                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                                                                             {vehiculo.año},{vehiculo.cilindraje},{vehiculo.id}
                                                                         </p>
                                                                     </div>
-                                                                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                                                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                                                         <button className='hover:gb-red-600 px-3 py-1' onClick={(e) => {
                                                                            var opcion = confirm("Esta seguro que desea eliminarlo?");
                                                                            if (opcion == true) {
@@ -221,7 +221,7 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
                                             }
                                            
 
-                                        }} class="block max-w p-3 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                        }} className="block max-w p-3 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                                             <p className='space-x-4'>Agregar un nuevo vehiculo</p>
 
                                         </a>
@@ -231,7 +231,7 @@ const ModalListasVehiculos = ({ isVisible, onClose }) => {
                             </ul>
 
 
-                            <div class="p-4 flow-root ">
+                            <div className="p-4 flow-root ">
                                 <button className='float-right bg-blue-800 text-white px-3 py-2 font-bold rounded-full ' onClick={(e) => {
                                     if (vehiculos.length != 0) {
                                         if (!document.querySelector('input[name="radioselectvehiculo"]:checked')) {
