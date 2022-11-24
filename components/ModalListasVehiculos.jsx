@@ -3,13 +3,10 @@ import { Fragment, useState } from 'react'
 import { useVehiculo } from '../context/vehiculosContext'
 import { useUsuario } from '../context/usuarioContext'
 import { useVehiculoSelect } from '../context/vehiculoSeleccionadoContext'
-import ModalVehiculos from '../components/modalVehiculos'
+import ModalVehiculos from './modalVehiculos'
 import { useVehiculoRadio } from '../context/vehiculosRadioContext'
-import { AiOutlinePlus } from 'react-icons/ai'
 import axios from 'axios'
-import { v4 as uuid } from 'uuid'
-import { info } from 'autoprefixer'
-import ModalMensaje from '../components/ModalMensaje'
+import ModalMensaje from './ModalMensaje'
 
 
 export async function getStaticPaths(url) {

@@ -3,12 +3,10 @@ import { useVehiculo } from '../context/vehiculosContext'
 import { useUsuario } from '../context/usuarioContext'
 import { Fragment, useState } from 'react'
 import ModalVehiculos from '../components/modalVehiculos'
-import { AiOutlinePlus } from 'react-icons/ai'
-import { useVehiculoSelect } from '../context/vehiculoSeleccionadoContext'
 import ModalListasVehiculos from '../components/ModalListasVehiculos'
 import Image from 'next/image'
 
-const Home = ({ data }) => {
+const Home = () => {
 
 
 
@@ -23,11 +21,6 @@ const Home = ({ data }) => {
 
   const { vehiculosSelect, createSelectVehiculo, deleteSelectVehiculo } = useUsuario()
 
-  const act = e => {
-    e.preventDefault()
-    actVehiculo(data)
-  }
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -109,17 +102,5 @@ const Home = ({ data }) => {
 
   )
 }
-export async function getStaticProps() {
-  try {
-    const res = await fetch('http://localhost:3000/api/vehiculos')
-    const data = await res.json()
-    return {
-      props: {
-        data
-      }
-    }
-  } catch (error) {
-    console.log(error)
-  }
-}
+
 export default Home
